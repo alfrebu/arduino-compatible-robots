@@ -89,6 +89,7 @@ There are some experiences in making possible to visually program Arduino:
   * the EU funded project EduWear created a layer on top of Arduino's IDE that aimed creating code in a similar fashion as *Scratch* does, it is called Amici and can be found (for MAC only) [http://dimeb.informatik.uni-bremen.de/eduwear/?p=495 here]
   * MAX/MSP presented at the conference Sketching in Hardware 2009 a prototype of a patch that can send code to Arduino as mentioned [http://www.philvanallen.com/news/sketching-in-hardware-2009/ here]
   * [http://www.modk.it/ ModKit] is an online platform to program Arduino from a browser, again based on the *Scratch* paradigm
+  * a combination of Scratch + Serial Server as explained [http://transitlab.org/2010/arduino-in-schools here]
 
 Considering the time constrains we have for the first phase of the *Oh_Oh* project (concept, prototype, first manufacturing run, and test with kids made in less than two months) we have decided that no matter how interesting VPUIs are, we are not going to even consider them. Moving into VP is a latter issue for us.
 
