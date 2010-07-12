@@ -55,12 +55,50 @@ Taking all of the above mentioned aspects into account, the hardware design shou
   * two DC motors with gear boxes, and wheels that could be found in Mexico
   * a ping pong ball as the back wheel
   * there will be no sensors on board, they will be placed on a daughter board situated in front of the robot that we decided to call *nose* in the same way *Arduino* has got *shields*
-  * there should be the possibility to mount an Arduino shield on top of the robot
+  * there should be the possibility to mount a _shield for Arduino_ on top of the robot
+  * the possibility to be programmed from Arduino's IDE (this affects the Software)
+  * a button and some LEDs on board
+  * a connection with the third PWM to allow easy connecting a servo
+  * powered by 9V batteries
 
 
 == Software ==
 
+When it comes to software, there are three aspects to take into account:
+
+  * how will the users program the robot, this is part of the user experience
+  * which IDE is convenient for our scenario of use, how will the IDE interact with the software needed to command the robot
+  * which are the possibilities to expand the system
+  * what experiments are interesting for a newcomer in the ages from 10 to 18 years old with no prior experience in electronics or software, what can be engaging and informative at the same time
+
+We don't think it is meaningful to spend a lot of time explaining the design decisions we have made regarding the IDE. We are constructing the system on top of the Arduino platform and there is a lot of information online regarding the advantages of using this IDE versus others. Mostly we like it for being cross-platform, easy to deploy, license free, and easy to integrate with the setup at the Computer Clubhouse at FARO.
+
+Therefore, when it comes to discuss about the software, we have been concentrating in aspects that have to do with the user experience:
+
+  * how will the kids program the robots
+  * what experiments are interesting
+
+=== How will the kids program the robots ===
+
+Since *Lego* launched their robotics platform, there is a lot of discussions going on about the advantages and disadvantages of using Visual Programming User Interfaces for creating and assigning behaviors to robots. Among the good things of VPUIs we find the lack of syntax errors, the ease of use, and the ease of understanding the system at one glance. Among the bad things, the problem they represent when trying to expand the system, the initial cost in developing the basic structure for it, and the lack of a common paradigm (robotics is a complex field, and Visual Programming is not very developed in terms of portability between systems).
+
+There are some experiences in making possible to visually program Arduino: 
+
+  * the EU funded project EduWear created a layer on top of Arduino's IDE that aimed creating code in a similar fashion as *Scratch* does, it is called Amici and can be found (for MAC only) [http://dimeb.informatik.uni-bremen.de/eduwear/?p=495 here]
+  * MAX/MSP presented at the conference Sketching in Hardware 2009 a prototype of a patch that can send code to Arduino as mentioned [http://www.philvanallen.com/news/sketching-in-hardware-2009/ here]
+  * [http://www.modk.it/ ModKit] is an online platform to program Arduino from a browser, again based on the *Scratch* paradigm
+
+Considering the time constrains we have for the first phase of the *Oh_Oh* project (concept, prototype, first manufacturing run, and test with kids made in less than two months) we have decided that no matter how interesting VPUIs are, we are not going to even consider them. Moving into VP is a latter issue for us.
+
+Therefore, the kids participating in our first test run will have to program the robots via code within the normal Arduino IDE. In order to make this as simple as possible, we have developed a library that covers the basic aspects of the robot's behavior. On top of that we have created a series of examples (see the following paragraph) that make use of this library.
+
+=== What experiments are interesting ===
+
+This part of the documentation will be explained in depth at a different page where you will find pictures of each experiment as well as code. We are working on it as for 2010-07-12.
+
 == Documentation ==
+
+You can follow a visual diary of the prototypes at [http://www.flickr.com/photos/dcuartielles/sets/72157624318825795/ this gallery] and some videos at [http://vimeo.com/album/252666 this channel]
 
 = Notes =
 
