@@ -1,0 +1,51 @@
+#summary Oh_Oh robot, low cost, easy to replicate robot for Mexico DF. Commisioned by http://ccemx.org, and with the invaluable help from Gianluca Martino from Arduino.cc
+
+= Introduction =
+
+Robotics are becoming a common educational resource. Together with other applied science fields like wearable computing, or music instrument design, robotics provides an alternative door into traditional fields like math and physics, as well as into more contemporary ones like computer science and complex systems.
+
+Part of the relevance of hybrid fields like robotics resides in their mixed nature. One can approach it from the mechanical, electronic, or purely software point of view. Robots can take many forms, it is possible to easily construct narratives around them. 
+
+== Oh_Oh ==
+
+*Oh_Oh* is the result of an exploration in the possibilities of cheap educational electronics. It is very important to keep the importance of low cost as a fundamental part of the project, since that will influence its design, as well as its accessibility.
+
+We created *Oh_Oh* after a couple of basic workshops in electronics with Kids at FARO de Oriente in Mexico DF. Very early in the process we realized there was an interest in learning about robotics. The Computer Clubhouse counts with a couple of Lego kits, but not enough for a group of 20 kids. 
+
+We realized that Mexico has a couple of companies dedicated to designing, manufacturing and selling small robots. However they were not really complying with the idea of reprogramability and reusability of general electronics, due to a closed firmware and the lack of an IDE to easily reconfigure the robot's behavior. 
+
+The important aspect for us was that we could get access to all the parts needed to build a cheap robot on-site. And that we could then easily hook up this robot to Arduino and build from there. So we decided to go on with the idea of making our own robot with as little parts as possible.
+
+=== Briefly about FARO de Oriente ===
+
+FARO is an art centre in the area of Iztapalapa, which happens to be one of the most populated municipalities in the world with over 3m inhabitants. At FARO it is possible to get an education in non-academic fields mostly related to arts and crafts. There is also a Computer Clubhouse donated by Intel as part of the Computer Clubhouse Village project initiated by MIT.
+
+Participants in the Computer Clubhouse activities range from 10 to 18 years old. You can read more about the workshops we conducted [http://medea.mah.se/2010/06/arduino-intro-for-kids-at-faro/ here]
+
+== Hardware ==
+
+This robot has been built based on a study ran informally over time. Back in 2006 Dave Mellis, from Arduino, had a workshop at _Ars Electronica Festival_. Then he used the robot called *Asuro*, created by the [http://www.dlr.de/rm/en/desktopdefault.aspx/tabid-3848/6062_read-9032/ Institute or Robotics and Mechatronics] at the German Aerospace Agency (DLR) and distributed by [http://www.arexx.com Arexxx Engineering]. No matter how much we liked the experience of playing with *Asuro* and how much we liked its name, it was far too complicated to mount. But it had a couple of nice details: the use of an inexpensive ping pong ball as front wheel, and the use of Arduino compatible processors.
+
+*Asuro* was running on an ATmega8. This processor has 3 PWM enabled pins, which is enough to control up to three motors. Robots in the scale we are talking about here, don't require a huge intelligence and the memory space of the mega8 seems more than enough. Again, this is a very relevant issue, since the processors are not equally available around the world. E.g. in Mexico it is really hard to get almost any processors from _Atmel_, the only manufacturer of the mega8, but the ATmega8L, which works up to 8MHz, has an internal oscillator and comes in a the very convenient DIL-28 package.
+
+Something that was making *Asuro* really hard to mount was that it had no integrated gear box. All the wheels and bars that integrated the gear box came unmounted, while it is possible to get those in a single inexpensive plastic molded box nowadays.
+
+== Software ==
+
+== Documentation ==
+
+= Notes =
+
+Contributors and how they were involved:
+  * Xun Yang, Malmö University, Sweden: Master Student in Interaction Design, responsible for software and behavior creation for Oh_Oh
+  * Gianluca Martino, Arduino, Italy: Hardware responsible for Arduino, made the original hardware designs easy to manufacture
+  * Tlacotalpan, México: inspired us with her infinite knowledge about how to name our robot
+  * Alejandro Jimenez, México: runs the Computer Clubhouse at FARO and hosts the workshops with kids
+  * Hugo, México: runs the paper sculpture workshops at FARO and designed the skull-covers for our robots
+  * David Cuartielles, Arduino, Malmö University, Sweden: PhD. Candidate in Interaction Design, Oh_Oh's project initiator, hardware designer and software instigator
+
+Institutions and companies contributing to the project:
+  * Centro Cultural de España en México: commissioned the project, special thanks to Eva Gómez for her endless support during the two years it took us to gather the funding
+  * FARO de Oriente, México: hosts the Computer Clubhouse
+  * Malmö University, Sweden: gave D. Cuartielles and X. Yang a workspace where to prototype the robot
+  * Arduino LLC, USA: donated 15 Arduino Duemilanove boards to FARO in order to start the workshops with kids
