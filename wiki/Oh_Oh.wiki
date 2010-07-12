@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Robotics are becoming a common educational resource. Together with other applied science fields like wearable computing, or music instrument design, robotics provides an alternative door into traditional fields like math and physics, as well as into more contemporary ones like computer science and complex systems.
+Robots are becoming a common educational resource. Together with other applied science fields like wearable computing, or music instrument design, robotics provides an alternative door into traditional fields like math and physics, as well as into more contemporary ones like computer science and complex systems.
 
 http://farm5.static.flickr.com/4140/4771192383_70171970d8.jpg
 
