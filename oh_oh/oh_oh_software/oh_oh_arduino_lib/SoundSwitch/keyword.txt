@@ -1,0 +1,4 @@
+SoundSwitch	KEYWORD1
+isOn		KEYWORD2
+isTurnningOn	KEYWORD2
+isTurnningOff	KEYWORD2
