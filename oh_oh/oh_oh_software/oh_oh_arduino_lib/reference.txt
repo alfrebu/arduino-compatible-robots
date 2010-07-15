@@ -1,0 +1,53 @@
+class FARO_Robot
+must include Servo.h
+
+
+	FARO_Robot():constructor
+robot motion control
+	forward():robot go forward
+	backward():robot go backward
+	left():robot turn left
+	right():robot turn right
+	stop():robot stop
+	changeSpeed(int speed,int Wheel=3):change speed of wheels
+		speed go from 0~255, have low speed threshold	wheel=1:left only, wheel=2:right only, wheel=3:both left and right
+
+	these functions only need to be called once to perform a continous action
+
+robot servo control
+	getServo():initialize servo
+	liftArm():servo lift up
+	dropArm():servo drop down
+	waveArm():servo go forward and backward for 3 turns(will pause program)
+	
+	Function called once to perform an action. See example Robot_Wave
+
+robot light sensing
+	followLight(): robot will follow light
+	escapeLight(): robot will escape from light
+	
+	Need to be put in loop. See example Robot_Light
+
+robot order list
+	startRandomRun(): fill robot's order list with 100 random orders, go with run() to work
+	stopRandomRun(): stop robot's random run action, go with run() to work
+	run(): robot run according to its order list
+	
+	run() need to be put in loop. See example Robot_Sound
+
+
+
+
+
+
+class SoundSwitch
+	with sound detector pin connecting to analogIn 0
+	
+	SoundSwitch(int pin,int threshold=100):constructor
+		pin shoud be 0, threshold is the noise threshold
+	checkState():run every loop to get sound data
+	isOn: true:switch is on(noise is high) false:switch is off(noise is low)
+	isTurnningOn: only be true at the right time the switch is turned on
+	isTurnningOff: only be true at the right time the switch is turned off
+	
+	See example Robot_Sound
