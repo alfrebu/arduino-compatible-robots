@@ -1,6 +1,8 @@
 /*********************************
 Works with SoundSwitch to determin the noise level
-attach sound detector's ouput to analogIn 0
+attach sound detector's ouput to analogIn 4
+
+NOTE:adjust microphone sensitivity with knob and Oh_Oh_test_microphone.pde first
 
 SoundSwitch constructor has two paraments, first is the analogIn pin it's using,
 second is the noise threshold, defaulted by 100;
