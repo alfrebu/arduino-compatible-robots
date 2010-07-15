@@ -1,0 +1,3 @@
+MultiClick	KEYWORD1
+ini		KEYWORD2
+begin		KEYWORD2
