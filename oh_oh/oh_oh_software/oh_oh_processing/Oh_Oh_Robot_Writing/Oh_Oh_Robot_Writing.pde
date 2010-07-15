@@ -1,3 +1,13 @@
+/**********************************************************************
+
+Working with Oh_Oh robot and the arduino sketch "Robot_Writing.pde"
+
+don't change the data array if you don't know how it works
+
+
+***********************************************************************/
+
+
 import processing.serial.*;
 
 Serial myPort;
