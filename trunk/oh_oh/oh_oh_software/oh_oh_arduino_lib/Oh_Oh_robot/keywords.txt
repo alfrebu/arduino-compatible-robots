@@ -12,6 +12,9 @@ liftArm		KEYWORD2
 dropArm		KEYWORD2
 presetArm	KEYWORD2
 
+iniIR		KEYWORD2
+runIR		KEYWORD2
+
 calibrateLight	KEYWORD2
 
 waveArm		KEYWORD2
