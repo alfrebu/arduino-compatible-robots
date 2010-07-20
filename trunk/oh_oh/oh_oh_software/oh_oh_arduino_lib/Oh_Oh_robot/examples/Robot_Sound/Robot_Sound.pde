@@ -1,8 +1,6 @@
 /*********************************
 Works with SoundSwitch to determin the noise level
-attach sound detector's ouput to analogIn 4
-
-NOTE:adjust microphone sensitivity with knob and Oh_Oh_test_microphone.pde first
+attach sound detector's ouput to analogIn 0
 
 SoundSwitch constructor has two paraments, first is the analogIn pin it's using,
 second is the noise threshold, defaulted by 100;
@@ -19,7 +17,8 @@ call FARO_Robot->run() each loop to get robot running according to its
 order list or keep still
 
 *********************************/
-
+#include <IRremote.h>
+#include <IRremoteInt.h>
 
 #include <Servo.h>
 

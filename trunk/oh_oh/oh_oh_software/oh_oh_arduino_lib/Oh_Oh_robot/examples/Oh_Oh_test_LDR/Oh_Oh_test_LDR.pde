@@ -4,7 +4,8 @@ Showing values from Oh_Oh robot's
 on-board LDR sensors
 
 **********************************/
-
+#include <IRremote.h>
+#include <IRremoteInt.h>
 
 #include <Servo.h>
 
