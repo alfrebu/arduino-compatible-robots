@@ -14,6 +14,7 @@ Oh_Oh_Robot::Oh_Oh_Robot()
 	Oh_Oh_Robot::motor_2_2=7;//3,7
 	Oh_Oh_Robot::motor_2_PWM=10;//5,10
 	Oh_Oh_Robot::ledPin=13;
+	Oh_Oh_Robot::ledPin2=12;
 	Oh_Oh_Robot::button=8;
 	Oh_Oh_Robot::speedL=255;
 	Oh_Oh_Robot::speedR=255;
@@ -29,9 +30,8 @@ Oh_Oh_Robot::Oh_Oh_Robot()
 	pinMode(motor_2_2,OUTPUT);
 //	pinMode(motor_2_PWM,OUTPUT);
 
-	//pinMode(ledPin,OUTPUT);
-	//pinMode(button1,INPUT);
-	//pinMode(button2,INPUT);
+	pinMode(ledPin,OUTPUT);
+	pinMode(ledPin2,OUTPUT);
 	
 	pinMode(button,OUTPUT);
 	digitalWrite(button,HIGH);
@@ -174,6 +174,8 @@ void Oh_Oh_Robot::getServo(int n){
 	
 	presetArm(80,110);
 	arm.attach(n);
+	timerServo=0;
+	servoDirection=0;
 }
 void Oh_Oh_Robot::liftArm(){
 	armPosition=1;
@@ -189,7 +191,7 @@ void Oh_Oh_Robot::waveArm(){
 	while(count){
 		for(int i=liftAngle;i>dropAngle;i-=2){
 			moveArm(i);
-			Serial.println(arm.read());
+			//Serial.println(arm.read());
 			delay(10);
 		}
 		for(int i=dropAngle;i<liftAngle;i+=2){
@@ -209,7 +211,20 @@ void Oh_Oh_Robot::moveArm(int angle){
 	armPosition=2;
 	arm.write(angle);
 }
-
+void Oh_Oh_Robot::moveArmSlow(){
+	if(servoDirection){
+		//Serial.println(servoDirection);
+		if(millis()-timerServo>=15){
+			int pos=arm.read();
+			if(servoDirection>0){
+				arm.write(pos+1);
+			}else{
+				arm.write(pos-1);
+			}
+		timerServo=millis();
+		}
+	}
+}
 
 //*********************************************** LDR functions
 
