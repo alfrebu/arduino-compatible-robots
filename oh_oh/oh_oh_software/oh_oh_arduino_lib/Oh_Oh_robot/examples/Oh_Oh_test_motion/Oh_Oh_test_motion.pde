@@ -7,11 +7,13 @@ and switch between different actions
 
 
 ***************************************************************/
+
 #include <Oh_Oh_Robot.h>
 
 #include <Servo.h>
 
-
+#include <IRremote.h>
+#include <IRremoteInt.h>
 
 
 
