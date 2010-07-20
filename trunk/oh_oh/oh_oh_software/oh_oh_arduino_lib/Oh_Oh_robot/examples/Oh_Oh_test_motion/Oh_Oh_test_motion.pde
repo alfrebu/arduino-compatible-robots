@@ -12,8 +12,7 @@ and switch between different actions
 
 #include <Servo.h>
 
-#include <IRremote.h>
-#include <IRremoteInt.h>
+
 
 
 

@@ -13,8 +13,6 @@ call Oh_Oh_Robot->sayHi() in each loop to determin
 
 
 ***********************************/
-#include <IRremote.h>
-#include <IRremoteInt.h>
 
 
 #include <Servo.h>

@@ -17,8 +17,7 @@ call FARO_Robot->run() each loop to get robot running according to its
 order list or keep still
 
 *********************************/
-#include <IRremote.h>
-#include <IRremoteInt.h>
+
 
 #include <Servo.h>
 

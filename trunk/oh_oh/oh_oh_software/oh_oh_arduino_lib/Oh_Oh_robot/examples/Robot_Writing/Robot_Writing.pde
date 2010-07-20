@@ -25,8 +25,7 @@ writing is not in shape
 
 
 ***************************************************/
-#include <IRremote.h>
-#include <IRremoteInt.h>
+
 
 #include <MultiClick.h>
 

@@ -8,8 +8,7 @@ Oh_Oh_Robot->escapeLight():Robot will escape light;
 
  ************************************
 */
-#include <IRremote.h>
-#include <IRremoteInt.h>
+
 
 
 #include <Servo.h>

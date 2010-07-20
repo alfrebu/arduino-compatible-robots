@@ -17,9 +17,6 @@ press "TV" button to see some special effects
 ********************************************************/
 
 
-#include <IRremote.h>
-#include <IRremoteInt.h>
-
 #include <Servo.h>
 
 #include <Oh_Oh_Robot.h>
@@ -29,6 +26,9 @@ Oh_Oh_Robot myRobot;
 void setup(){
   Serial.begin(9600);
   myRobot.iniIR();
+  myRobot.onOffMode();
+  myRobot.onOff(true);
+
   myRobot.getServo();
   
 }
