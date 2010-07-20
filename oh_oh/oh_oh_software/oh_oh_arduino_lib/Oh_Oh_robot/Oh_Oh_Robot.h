@@ -2,8 +2,8 @@
 #define Oh_Oh_Robot_h
 
 #include "../Servo/Servo.h"
-//#include "../MultiClick/MultiClick.h"
 
+#define LENGTH_IR 30
 
 class Oh_Oh_Robot
 {
@@ -44,9 +44,10 @@ class Oh_Oh_Robot
 		void liftArm();
 		void dropArm();
 		void waveArm();
+		void moveArmSlow();
 
 		void presetArm(int dropAngle, int liftAngle);
-		
+
 
 		void sayHi(int LDRsensitivity=30,int number=6);
 		//para1: change the sensitivity of LDR;para2: how many countings it needs for robot to wave
@@ -56,6 +57,11 @@ class Oh_Oh_Robot
 		void calibrateLight();
 		void followLight();
 		void escapeLight();
+
+//Infrared
+
+		void iniIR(char pin=19,int A_1=0x490,int A_2=0xC90,int B_1=0x090,int B_2=0x890,int C=0xA90,int D=0x290);
+		void runIR();
 
 //Scriptted running
 		
@@ -94,6 +100,7 @@ private
 
 		char button;
 		char ledPin;
+		char ledPin2;
 
 		void turnLeftWheel(int dir);
 		void turnRightWheel(int dir);
@@ -103,10 +110,10 @@ private
 		Servo arm;
 		int dropAngle;
 		int liftAngle;
-		
+		int servoDirection;
+		int timerServo;
 		
 		void moveArm(int angle);
-
 //LDR
 
 		int oldValue_LDR;
@@ -115,6 +122,25 @@ private
 		char LDR_L;
 		char LDR_R;
 		void LDR_getValues();
+		
+//Infrared
+		
+		int A_1;
+		int A_2;
+		int B_1;
+		int B_2;
+		int C;
+		int D;
+		
+		char pinIR;
+		int valueIR;
+		bool modeIR;
+		long timerIR;
+		
+		void setValue(int val);
+		void switchModeIR();
+		void funFunction();
+		int getIRSignal();
 
 //Scriptted running
 
@@ -147,7 +173,8 @@ private
 
 		void randomfillArray();
 
-
+	//leds
+		void funBlink();
 };
 
 #endif
